@@ -1,0 +1,27 @@
+storage:
+  url: file:///Users/AllenWalker/Desktop/file-system-resource/
+#storage:
+#  url: s3://cloudsycbucket/
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+        format_sql: true
+
+cloud:
+  aws:
+    credentials:
+      accessKey: your access key
+      secretKey: your secret key
+    region.static: ap-southeast-1
